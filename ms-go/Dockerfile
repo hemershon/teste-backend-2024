@@ -2,6 +2,7 @@ FROM golang:1.20-alpine as golang
 
 RUN apk add -U tzdata
 RUN apk --update add ca-certificates
+RUN apk add --no-cache git
 
 WORKDIR /app
 COPY . .
